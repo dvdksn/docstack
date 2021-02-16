@@ -1,0 +1,26 @@
+{
+    "name": "",
+    "description": "",
+    "properties": {
+        "markup": [""],
+        "templates": [""],
+        "language": "",
+        "framework": ""
+    },
+    "features": {
+        "pdf": false,
+        "multilang": false,
+        "responsive": false,
+        "search": false,
+        "darkmode": false,
+        "comments": false,
+        "attachments": false,
+        "tabs": false,
+        "blog": false
+    },
+    "developer": {
+        "name": "",
+        "license": "MIT",
+        "url": ""
+    }
+}
