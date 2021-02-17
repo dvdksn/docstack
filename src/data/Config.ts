@@ -54,7 +54,7 @@ export const allStacks: StackItem[] = [
 		}
 	},
 	{
-		"name": "Jekyll Documentation Theme",
+		"name": "Jekyll Doc Theme",
 		"description": "A documentation-focused theme for the Jekyll static site generator.",
 		"properties": {
 			"markup": ["Markdown"],
@@ -126,6 +126,56 @@ export const allStacks: StackItem[] = [
 			"name": "Hasura",
 			"license": "MIT",
 			"url": "https://github.com/hasura/gatsby-gitbook-starter"
+		}
+	},
+	{
+		"name": "docsify",
+		"description": "A magical documentation site generator.",
+		"properties": {
+			"markup": ["Markdown"],
+			"templates": ["JavaScript", "Vue"],
+			"language": "JavaScript",
+			"framework": "Vue"
+		},
+		"features": {
+			"pdf": false,
+			"multilang": true,
+			"search": true,
+			"darkmode": false,
+			"tabs": true,
+			"blog": false,
+			"ssr": true,
+			"themes": true,
+		},
+		"developer": {
+			"name": "docsifyjs",
+			"license": "MIT",
+			"url": "https://docsify.js.org/"
+		}
+	},
+	{
+		"name": "mdBook",
+		"description": "mdBook is a utility to create modern online books from Markdown files.",
+		"properties": {
+			"markup": ["Markdown"],
+			"templates": ["Custom"],
+			"language": "Rust",
+			"framework": "None"
+		},
+		"features": {
+			"pdf": true,
+			"multilang": false,
+			"search": true,
+			"darkmode": true,
+			"tabs": false,
+			"blog": false,
+			"ssr": false,
+			"themes": true,
+		},
+		"developer": {
+			"name": "Rust Team",
+			"license": "MPL-2.0",
+			"url": "https://github.com/rust-lang/mdBook"
 		}
 	}
 ]
