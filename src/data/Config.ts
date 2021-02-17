@@ -15,13 +15,12 @@ export const allStacks: StackItem[] = [
 		"features": {
 			"pdf": true,
 			"multilang": true,
-			"responsive": true,
 			"search": true,
 			"darkmode": false,
-			"comments": false,
-			"attachments": true,
 			"tabs": true,
 			"blog": false,
+			"ssr": false,
+			"themes": true,
 		},
 		"developer": {
 			"name": "ReadTheDocs",
@@ -41,13 +40,12 @@ export const allStacks: StackItem[] = [
 		"features": {
 			"pdf": false,
 			"multilang": false,
-			"responsive": true,
 			"search": true,
 			"darkmode": true,
-			"comments": false,
-			"attachments": true,
 			"tabs": false,
 			"blog": false,
+			"ssr": false,
+			"themes": false,
 		},
 		"developer": {
 			"name": "Weru",
@@ -67,13 +65,12 @@ export const allStacks: StackItem[] = [
 		"features": {
 			"pdf": true,
 			"multilang": false,
-			"responsive": true,
 			"search": true,
 			"darkmode": false,
-			"comments": false,
-			"attachments": false,
 			"tabs": false,
-			"blog": false
+			"blog": false,
+			"ssr": false,
+			"themes": false,
 		},
 		"developer": {
 			"name": "Tom Johnson",
@@ -93,13 +90,12 @@ export const allStacks: StackItem[] = [
 		"features": {
 			"pdf": false,
 			"multilang": true,
-			"responsive": true,
 			"search": true,
 			"darkmode": true,
-			"comments": false,
-			"attachments": true,
 			"tabs": true,
-			"blog": true
+			"blog": true,
+			"ssr": false,
+			"themes": true,
 		},
 		"developer": {
 			"name": "Facebook",
@@ -109,7 +105,7 @@ export const allStacks: StackItem[] = [
 	},
 	{
 		"name": "Gatsby GitBook Starter",
-		"description": "A Gatsby starter template inspired by the popular GitBook site generator.",
+		"description": "A Gatsby starter template inspired by GitBook.",
 		"properties": {
 			"markup": ["Markdown, MDX"],
 			"templates": ["JSX"],
@@ -119,13 +115,12 @@ export const allStacks: StackItem[] = [
 		"features": {
 			"pdf": false,
 			"multilang": false,
-			"responsive": true,
 			"search": true,
 			"darkmode": true,
-			"comments": false,
-			"attachments": true,
 			"tabs": false,
-			"blog": false
+			"blog": false,
+			"ssr": false,
+			"themes": false,
 		},
 		"developer": {
 			"name": "Hasura",
@@ -140,15 +135,14 @@ export const allStacks: StackItem[] = [
 export const filterDefaults: Filters = {
 	language: "all",
 	features: {
-		attachments: false,
 		blog: false,
-		comments: false,
 		darkmode: false,
 		multilang: false,
 		pdf: false,
-		responsive: false,
 		search: false,
-		tabs: false
+		tabs: false,
+		ssr: false,
+		themes: false,
 	}
 }
 

@@ -4,13 +4,12 @@ export default {
     // Features
     pdf: "PDF",
     multilang: "Multilingual",
-    responsive: "Responsive",
     search: "Search",
     darkmode: "Dark Mode",
-    comments: "Comments",
-    attachments: "Attachments",
     tabs: "Code Tabs",
     blog: "Blog",
+    ssr: "Server-Side Rendering",
+    themes: "Themes",
     // Languages
     all: "All",
     js: "JavaScript",

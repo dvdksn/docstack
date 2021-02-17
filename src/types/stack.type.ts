@@ -10,19 +10,18 @@ type Properties = {
     markup: string[];
     templates: string[];
     language: string;
-    framework?: string;
+    framework: string;
 };
 
 export type FeatureList = {
     pdf: boolean;
     multilang: boolean;
-    responsive: boolean;
     search: boolean;
     darkmode: boolean;
-    comments: boolean;
-    attachments: boolean;
     tabs: boolean;
     blog: boolean;
+    ssr: boolean;
+    themes: boolean;
 };
 
 type Developer = {
