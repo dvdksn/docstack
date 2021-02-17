@@ -64,5 +64,16 @@ export const derivedStacks = derived(
         const featureState = $filterState.features
         // Filter the stack list based on filter selection
         return filterByFeature(filterByLanguage($initialStacks, langState), featureState)
+            .sort((a, b) => {
+                const first = a.name.toLowerCase()
+                const last = b.name.toLowerCase()
+                if (first < last) {
+                    return -1
+                }
+                else if (first > last) {
+                    return 1
+                }
+                return 0
+            })
         }
 )
