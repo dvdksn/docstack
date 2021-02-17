@@ -10,8 +10,8 @@
 
 <style>
     button.reset {
-        background: var(--light-red);
-        color: var(--red);
+        background: var(--red);
+        color: var(--white);
         border: 2px solid var(--red);
         font-weight: 600;
         max-width: max-content;

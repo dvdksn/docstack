@@ -37,7 +37,7 @@
 	}
 	@media (max-width: 700px) {
 		main {
-			margin: 0;
+			margin: 10px;
 			padding: 0;
 		}
 		h1 {
@@ -46,7 +46,7 @@
 	}
 	.cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-auto-rows: auto;
         grid-gap: 1rem;
         justify-content: center;
