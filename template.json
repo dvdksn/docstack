@@ -10,13 +10,12 @@
     "features": {
         "pdf": false,
         "multilang": false,
-        "responsive": false,
         "search": false,
         "darkmode": false,
-        "comments": false,
-        "attachments": false,
         "tabs": false,
-        "blog": false
+        "blog": false,
+        "ssr": false,
+        "themes": false
     },
     "developer": {
         "name": "",
