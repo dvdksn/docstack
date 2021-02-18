@@ -177,6 +177,31 @@ export const allStacks: StackItem[] = [
 			"license": "MPL-2.0",
 			"url": "https://github.com/rust-lang/mdBook"
 		}
+	},
+	{
+		"name": "Sphinx",
+		"description": "Sphinx is a Python-based tool for generating intelligent documentation, and it uses reStructuredText as its markup language.",
+		"properties": {
+			"markup": ["reStructuredText", "Markdown", "LaTeX"],
+			"templates": ["Jinja"],
+			"language": "Python",
+			"framework": "None"
+		},
+		"features": {
+			"pdf": true,
+			"multilang": true,
+			"search": true,
+			"darkmode": true,
+			"tabs": false,
+			"blog": false,
+			"ssr": false,
+			"themes": true
+		},
+		"developer": {
+			"name": "Georg Brandl",
+			"license": "BSD",
+			"url": "https://www.sphinx-doc.org/en/master/"
+		}
 	}
 ]
 
