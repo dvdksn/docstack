@@ -29,10 +29,10 @@ export const allStacks: StackItem[] = [
 		}
 	},
 	{
-		"name": "Compose",
-		"description": "Compose is a lean theme for Hugo, inspired by forestry.io.",
+		"name": "Doks",
+		"description": "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.",
 		"properties": {
-			"markup": [ "Markdown", "AsciiDoc", "reStructuredText", "HTML", "org" ],
+			"markup": [ "Markdown", "KaTeX" ],
 			"templates": [ "Go Templates" ],
 			"language": "Go",
 			"framework": "Hugo",
@@ -43,14 +43,14 @@ export const allStacks: StackItem[] = [
 			"search": true,
 			"darkmode": true,
 			"tabs": false,
-			"blog": false,
+			"blog": true,
 			"ssr": false,
 			"themes": false,
 		},
 		"developer": {
-			"name": "Weru",
+			"name": "Henk Verlinde",
 			"license": "MIT",
-			"url": "https://docs.neuralvibes.com/",
+			"url": "https://getdoks.org/",
 		}
 	},
 	{
@@ -157,7 +157,7 @@ export const allStacks: StackItem[] = [
 		"name": "mdBook",
 		"description": "mdBook is a utility to create modern online books from Markdown files.",
 		"properties": {
-			"markup": ["Markdown"],
+			"markup": ["Markdown", "MathJax"],
 			"templates": ["Custom"],
 			"language": "Rust",
 			"framework": "None"
