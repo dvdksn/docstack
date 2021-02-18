@@ -202,6 +202,81 @@ export const allStacks: StackItem[] = [
 			"license": "BSD",
 			"url": "https://www.sphinx-doc.org/en/master/"
 		}
+	},
+	{
+		"name": "Docsy",
+		"description": "A Hugo theme for technical documentation sites",
+		"properties": {
+			"markup": ["Markdown"],
+			"templates": ["Go Templates"],
+			"language": "Go",
+			"framework": "Hugo"
+		},
+		"features": {
+			"pdf": false,
+			"multilang": true,
+			"search": true,
+			"darkmode": true,
+			"tabs": false,
+			"blog": true,
+			"ssr": false,
+			"themes": false
+		},
+		"developer": {
+			"name": "The Docsy Authors",
+			"license": "Apache-2.0",
+			"url": "https://www.docsy.dev/"
+		}
+	},
+	{
+		"name": "Hugo Book",
+		"description": "Hugo documentation theme as simple as a plain book",
+		"properties": {
+			"markup": ["Markdown"],
+			"templates": ["Go Templates"],
+			"language": "Go",
+			"framework": "Hugo"
+		},
+		"features": {
+			"pdf": false,
+			"multilang": true,
+			"search": true,
+			"darkmode": true,
+			"tabs": true,
+			"blog": true,
+			"ssr": false,
+			"themes": false
+		},
+		"developer": {
+			"name": "Alex Shpak",
+			"license": "MIT",
+			"url": "https://github.com/alex-shpak/hugo-book"
+		}
+	},
+	{
+		"name": "Whisper",
+		"description": "Whisper is a minimal documentation theme built for Hugo. The design and functionality is intentionally minimal.",
+		"properties": {
+			"markup": ["Markdown"],
+			"templates": ["Go Templates"],
+			"language": "Go",
+			"framework": "Hugo"
+		},
+		"features": {
+			"pdf": false,
+			"multilang": false,
+			"search": false,
+			"darkmode": false,
+			"tabs": false,
+			"blog": false,
+			"ssr": false,
+			"themes": false
+		},
+		"developer": {
+			"name": "Robert Austin",
+			"license": "MIT",
+			"url": "https://github.com/zerostaticthemes/hugo-whisper-theme"
+		}
 	}
 ]
 
