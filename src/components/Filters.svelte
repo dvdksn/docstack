@@ -57,8 +57,8 @@
         display: flex;
         flex-direction: column;
     }
-    .filters :global(button) {
-        background: white;
+    .filters :global(fieldset button) {
+        background: var(--white);
         border: 1px solid var(--dark-gray);
         color: var(--dark-gray);
         margin: 0.5rem;
