@@ -1,0 +1,5 @@
+[build]
+  base = "."
+  publish = "build/"
+  command = "npm run buid && npm run adapt"
+  functions = "functions/"

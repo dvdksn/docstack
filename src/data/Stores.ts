@@ -5,11 +5,11 @@ import strings from "$data/Strings"
 import { allStacks, filterDefaults } from "$data/Config"
 
 // Create filter store and instantiate default values
-export const filterState = writable<Filters>(JSON.parse(JSON.stringify(filterDefaults)))
+export const filterState = writable<Filters>(JSON.parse(filterDefaults))
 
 // Initiate the full "initial" list of stacks
 export const initialStacks = readable<StackItem[]>(null, set => {
-    set(allStacks)
+    set(JSON.parse(allStacks))
     return () => {
         set(null)
     }

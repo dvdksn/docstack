@@ -2,7 +2,7 @@ import type { Filters } from "$types/filters.type"
 import type { StackItem } from "$types/stack.type"
 
 // Declare initial docstack items
-export const allStacks: StackItem[] = [
+export const allStacks = JSON.stringify(<StackItem[]>[
 	{
 		"name": "MkDocs", 
 		"description": "A python-based static site generator for creating documentation.",
@@ -278,11 +278,10 @@ export const allStacks: StackItem[] = [
 			"url": "https://github.com/zerostaticthemes/hugo-whisper-theme"
 		}
 	}
-]
-
+])
 
 // Declare filter state props and defaults
-export const filterDefaults: Filters = {
+export const filterDefaults = JSON.stringify(<Filters>{
 	language: "all",
 	features: {
 		blog: false,
@@ -294,6 +293,6 @@ export const filterDefaults: Filters = {
 		ssr: false,
 		themes: false,
 	}
-}
+})
 
 export const languageOptions: Filters["language"][] = ["all", "js", "python", "go", "other"]

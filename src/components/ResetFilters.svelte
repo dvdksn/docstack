@@ -4,7 +4,7 @@
 </script>
 
 <button class="reset"
-    on:click|preventDefault={() => filterState.set(JSON.parse(JSON.stringify(filterDefaults)))}>
+    on:click|preventDefault={() => filterState.set(JSON.parse(filterDefaults))}>
     Reset Filters
 </button>
 
