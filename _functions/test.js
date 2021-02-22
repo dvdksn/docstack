@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb"
+const { MongoClient } = require("mongodb")
 
 async function getData() {
     const uri = process.env.MONGO_URI
