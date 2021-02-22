@@ -20,7 +20,7 @@ async function getData() {
     }
 }
 
-export const handler = async (event, context) => {
+exports.handler = async (event, context) => {
     try {
         const data = await getData()
         return {
