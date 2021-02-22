@@ -13,6 +13,7 @@ async function getData() {
             .db("dev")
             .collection("stacks")
             .findOne({ name: "MkDocs"})
+        return test
     } catch (err) {
         console.log(err)
     } finally {
