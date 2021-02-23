@@ -12,7 +12,7 @@ async function getData() {
         const test = await client
             .db("dev")
             .collection("stacks")
-            .findOne({ name: "MkDocs"})
+            .find({})
         return test
     } catch (err) {
         console.log(err)
@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
         const data = await getData()
         return {
             statusCode: 200,
-            body: JSON.stringify({ id: data._id })
+            body: JSON.stringify(data)
         }
     } catch (err) {
         console.log(err)
