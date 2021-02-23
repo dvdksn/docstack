@@ -3,6 +3,7 @@ import type { StackItem } from "$types/stack.type"
 import type { Filters } from "$types/filters.type"
 import strings from "$data/Strings"
 import { filterDefaults } from "$data/Config"
+import fetch from "cross-fetch"
 
 // Create filter store and instantiate default values
 export const filterState = writable<Filters>(JSON.parse(filterDefaults))
