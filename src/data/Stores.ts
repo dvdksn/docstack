@@ -2,14 +2,28 @@ import { readable, writable, derived } from 'svelte/store'
 import type { StackItem } from "$types/stack.type"
 import type { Filters } from "$types/filters.type"
 import strings from "$data/Strings"
-import { allStacks, filterDefaults } from "$data/Config"
+import { filterDefaults } from "$data/Config"
 
 // Create filter store and instantiate default values
 export const filterState = writable<Filters>(JSON.parse(filterDefaults))
 
+async function fetchData() {
+    const response = await fetch("/.netlify/functions/mongo")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Database request failed.")
+            }
+            return response.json()
+        })
+        .catch((err) => {
+            console.error("Error:", err)
+        }
+    )
+}
+
 // Initiate the full "initial" list of stacks
-export const initialStacks = readable<StackItem[]>(null, set => {
-    set(JSON.parse(allStacks))
+export const initialStacks = readable(null, (set) => {
+    set(fetchData())
     return () => {
         set(null)
     }

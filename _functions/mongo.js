@@ -11,9 +11,8 @@ async function getData() {
         await client.connect()
         const test = await client
             .db("dev")
-            .collection("stacks")
+            .collection("dump")
             .find({})
-            .toArray()
         return test
     } catch (err) {
         console.log(err)
