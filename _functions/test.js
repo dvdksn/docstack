@@ -13,6 +13,7 @@ async function getData() {
             .db("dev")
             .collection("stacks")
             .find({})
+            .toArray()
         return test
     } catch (err) {
         console.log(err)
