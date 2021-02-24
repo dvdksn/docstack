@@ -1,34 +1,15 @@
-import { readable, writable, derived } from 'svelte/store'
+import { writable, derived } from 'svelte/store'
 import type { StackItem } from "$types/stack.type"
 import type { Filters } from "$types/filters.type"
 import strings from "$data/Strings"
 import { filterDefaults } from "$data/Config"
-import fetch from "cross-fetch"
 
 // Create filter store and instantiate default values
 export const filterState = writable<Filters>(JSON.parse(filterDefaults))
 
-async function fetchData() {
-    const response = await fetch("/.netlify/functions/mongo")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Database request failed.")
-            }
-            return response.json()
-        })
-        .catch((err) => {
-            console.error("Error:", err)
-        }
-    )
-}
-
-// Initiate the full "initial" list of stacks
-export const initialStacks = readable(null, (set) => {
-    set(fetchData())
-    return () => {
-        set(null)
-    }
-})
+// Initiate the full "initial" list of stacks as undefined
+// Stacks are fetched from DB client-side, and store is updated
+export const initialStacks = writable<StackItem[]>(undefined)
 
 function filterByLanguage(items: StackItem[], lang: Filters["language"]) {
     // Compare the filter language selection with the language prop for each stack item

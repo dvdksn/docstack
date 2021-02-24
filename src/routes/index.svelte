@@ -1,7 +1,21 @@
 <script lang="ts">
     import Filters from "$components/Filters.svelte";
 	import Card from "$components/Card.svelte";
-	import { derivedStacks } from "$data/Stores";
+	import { initialStacks, derivedStacks } from "$data/Stores";
+	import { onMount } from "svelte";
+	import type { StackItem } from "$types/stack.type"
+
+	onMount(async () => {
+		const response = await fetch("/.netlify/functions/mongo")
+
+		if (!response.ok) {
+			throw new Error("Database request failed.")
+		}
+		
+		const payload: StackItem[] = await response.json()
+
+		initialStacks.update(data => payload)
+	})
 
 </script>
 
