@@ -9,7 +9,7 @@ export const filterState = writable<Filters>(JSON.parse(filterDefaults))
 
 // Initiate the full "initial" list of stacks as undefined
 // Stacks are fetched from DB client-side, and store is updated
-export const initialStacks = writable<StackItem[]>(undefined)
+export const initialStacks = writable<StackItem[]>([])
 
 function filterByLanguage(items: StackItem[], lang: Filters["language"]) {
     // Compare the filter language selection with the language prop for each stack item
