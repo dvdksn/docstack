@@ -12,7 +12,7 @@ async function getData() {
         const test = await client
             .db("dev")
             .collection("dump")
-            .find({})
+            .find({}).toArray()
         return test
     } catch (err) {
         console.log(err)
