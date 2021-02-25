@@ -25,9 +25,15 @@
 
 	<Filters />
 	<div class="cards">
-		{#each $derivedStacks as stack}
-			<Card {stack} />
-		{/each}
+		{#if $derivedStacks.length > 0}
+			{#each $derivedStacks as stack}
+				<Card {stack} />
+			{/each}
+		{:else}
+			<div class="placeholder">
+				<h2>Loading data...</h2>
+			</div>
+		{/if}
 	</div>
 </main>
 
@@ -65,4 +71,9 @@
         grid-gap: 1rem;
         justify-content: center;
     }
+	.placeholder {
+		margin-top: 1rem;
+		color: var(--purple);
+		grid-column: 1 / -1;
+	}
 </style>

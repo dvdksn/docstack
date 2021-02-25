@@ -2,5 +2,5 @@
 node_modules
 /.svelte
 /build
-# Local Netlify folder
 .netlify
+.env

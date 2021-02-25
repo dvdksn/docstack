@@ -9,11 +9,11 @@ async function getData() {
 
     try {
         await client.connect()
-        const test = await client
-            .db("dev")
-            .collection("dump")
+        const data = await client
+            .db(process.env.DB_NAME)
+            .collection(process.env.DB_COLLECTION)
             .find({}).toArray()
-        return test
+        return data
     } catch (err) {
         console.log(err)
     } finally {
