@@ -15,12 +15,12 @@
 			}
 
 			const payload: StackItem[] = await response.json()
-			setWithExpiry("stacklist", payload, 300)
+			setWithExpiry("stacklist", payload, 300000)
 		}
 
-		const stackList: StackItem[] = JSON.parse(localStorage.getItem("stacklist")).value
+		const stackList = JSON.parse(localStorage.getItem("stacklist"))
 
-		initialStacks.update(() => stackList)
+		initialStacks.update(() => stackList.value)
 
 	})
 
