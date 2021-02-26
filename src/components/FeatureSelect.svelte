@@ -1,6 +1,6 @@
 <script lang="ts">
-    import strings from "$data/Strings"
-    import { filterState } from "$data/Stores";
+    import strings from "$cfg/Strings"
+    import { filterState } from "$cfg/Stores";
 </script>
 
 <fieldset>

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { filterState } from "$data/Stores"
-    import { filterDefaults } from "$data/Config";
+    import { filterState } from "$cfg/Stores"
+    import { filterDefaults } from "$cfg/Filters";
 </script>
 
 <button class="reset"

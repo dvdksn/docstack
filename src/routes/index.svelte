@@ -1,20 +1,27 @@
 <script lang="ts">
+	import { onMount } from "svelte";
     import Filters from "$components/Filters.svelte";
 	import Card from "$components/Card.svelte";
-	import { initialStacks, derivedStacks } from "$data/Stores";
-	import { onMount } from "svelte";
 	import type { StackItem } from "$types/stack.type"
+	import { initialStacks, derivedStacks } from "$cfg/Stores";
+	import { getWithExpiry, setWithExpiry } from "$cfg/Utils"
 
 	onMount(async () => {
-		const response = await fetch("/.netlify/functions/mongo")
+		if (!getWithExpiry("stacklist")) {
+			const response = await fetch("/.netlify/functions/mongo")
 
-		if (!response.ok) {
-			throw new Error("Database request failed.")
+			if (!response.ok) {
+				throw new Error("Database request failed.")
+			}
+
+			const payload: StackItem[] = await response.json()
+			setWithExpiry("stacklist", payload, 300)
 		}
-		
-		const payload: StackItem[] = await response.json()
 
-		initialStacks.update(data => payload)
+		const stackList: StackItem[] = JSON.parse(localStorage.getItem("stacklist")).value
+
+		initialStacks.update(() => stackList)
+
 	})
 
 </script>
@@ -25,14 +32,18 @@
 
 	<Filters />
 	<div class="cards">
-		{#if $derivedStacks.length > 0}
+		{#if $initialStacks.length === 0}
+			<div class="placeholder loading">
+				<h2>Loading...</h2>
+			</div>
+		{:else if $derivedStacks.length === 0}
+			<div class="placeholder">
+				<h2>No match for the current filter selection.</h2>
+			</div>
+		{:else}
 			{#each $derivedStacks as stack}
 				<Card {stack} />
 			{/each}
-		{:else}
-			<div class="placeholder">
-				<h2>Loading data...</h2>
-			</div>
 		{/if}
 	</div>
 </main>
@@ -75,5 +86,22 @@
 		margin-top: 1rem;
 		color: var(--purple);
 		grid-column: 1 / -1;
+	}
+	@keyframes bounce {
+		0% {
+			transform: translateY(0px);
+		}
+		40% {
+			transform: translateY(40px);
+		}
+		80%,
+		100% {
+			transform: translateY(0px);
+		}
+	}
+	.loading h2 {
+		animation-name: bounce;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
 	}
 </style>

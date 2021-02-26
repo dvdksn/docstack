@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { StackItem } from "$types/stack.type"
-    import strings from "$data/Strings"
+    import strings from "$cfg/Strings"
     export let stack: StackItem;
 </script>
 

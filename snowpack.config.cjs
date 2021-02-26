@@ -6,11 +6,11 @@ module.exports = {
 	],
 	mount: {
 		'src/components': '/_components',
-		'src/data': '/_data',
+		'src/cfg': '/_cfg',
 	},
 	alias: {
 		$components: './src/components',
 		$types: './src/types',
-		$data: './src/data',
+		$cfg: './src/cfg',
 	}
 };

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { languageOptions } from "$data/Config"
-    import { filterState, derivedStacks } from "$data/Stores"
-    import strings from "$data/Strings"
+    import { languageOptions } from "$cfg/Filters"
+    import { filterState, derivedStacks } from "$cfg/Stores"
+    import strings from "$cfg/Strings"
     let selected = false;
 </script>
 

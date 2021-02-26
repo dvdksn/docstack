@@ -15,6 +15,7 @@
     --white: hsl(0, 0%, 100%);
     --round-button: 10px;
     overflow-y: scroll;
+    letter-spacing: 0.5px;
 }
 
 body {
