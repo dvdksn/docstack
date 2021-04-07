@@ -1,8 +1,8 @@
 import { writable, derived } from 'svelte/store'
 import type { StackItem } from "$types/stack.type"
 import type { Filters } from "$types/filters.type"
-import strings from "$cfg/Strings"
-import { filterDefaults } from "$cfg/Filters"
+import strings from "./Strings"
+import { filterDefaults } from "./Filters"
 
 // Create filter store and instantiate default values
 export const filterState = writable<Filters>(JSON.parse(filterDefaults))

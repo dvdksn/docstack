@@ -20,7 +20,6 @@
 		"paths": {
 			"$components/*": ["./src/components/*"],
 			"$types/*": ["./src/types/*"],
-			"$cfg/*": ["./src/cfg/*"],
 		}
 	},
 	"include": ["src/**/*"],
