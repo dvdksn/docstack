@@ -1,4 +1,4 @@
 [build]
   publish = "build/"
-  command = "npm run build && npm run adapt"
+  command = "npm run build"
   functions = "_functions/"
