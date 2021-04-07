@@ -3,8 +3,8 @@
   import Filters from "$lib/Filters.svelte";
   import Card from "$lib/Card.svelte";
   import type { StackItem } from "$types/stack.type";
-  import { initialStacks, derivedStacks } from "$lib/cfg/Stores";
-  import { getWithExpiry, setWithExpiry } from "$lib/cfg/Utils";
+  import { initialStacks, derivedStacks } from "../lib/cfg/Stores";
+  import { getWithExpiry, setWithExpiry } from "../lib/cfg/Utils";
 
   onMount(async () => {
     if (!getWithExpiry("stacklist")) {
